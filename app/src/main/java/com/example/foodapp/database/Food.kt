@@ -22,6 +22,15 @@ data class Food(
     @ColumnInfo(name = "orderTime")
     var orderTime: String?,
 
+    @ColumnInfo(name = "Quantity")
+    var quantity: Int?,
+
+    @ColumnInfo(name = "Email")
+    var customerName: String?,
+
+    @ColumnInfo(name = "PhoneNo")
+    var phone: String?,
+
     @ColumnInfo(name = "Image")
     var foodImage: ByteArray? = null
 )

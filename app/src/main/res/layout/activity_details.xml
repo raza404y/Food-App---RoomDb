@@ -29,7 +29,7 @@
                 <ImageView
                     android:id="@+id/detail_image"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_140sdp"
+                    android:layout_height="@dimen/_180sdp"
                     android:src="@drawable/img_1"
                     android:scaleType="centerCrop"/>
 
@@ -38,10 +38,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/_18ssp"
-                    android:text="Food Name"
+                    android:text="@string/food_name"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textColor="@color/black"
+                    android:layout_marginVertical="@dimen/_12sdp"
                     android:padding="@dimen/_4sdp"/>
 
                 <LinearLayout
@@ -172,18 +173,23 @@
                     android:text="@string/_5"/>
 
             </LinearLayout>
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/submit_btn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/submit_order"
-                android:background="@drawable/et_bg"
+                android:elegantTextHeight="true"
+                app:rippleColor="@color/white"
                 android:textColor="@color/white"
-                app:cornerRadius="@dimen/_8sdp"
+                app:cornerRadius="@dimen/_28sdp"
                 android:backgroundTint="@color/red"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:textAllCaps="false"
-                android:textSize="@dimen/_15ssp"/>
+                android:paddingHorizontal="@dimen/_18sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:textSize="@dimen/_13ssp"/>
         </LinearLayout>
     </LinearLayout>
 

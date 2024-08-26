@@ -20,4 +20,6 @@
     <string name="dolar">$</string>
     <string name="_5">5</string>
     <string name="submit_order">Submit Order</string>
+    <string name="food_name">Food Name</string>
+    <string name="menu">Menu</string>
 </resources>
