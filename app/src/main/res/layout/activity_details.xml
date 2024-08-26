@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbars="none"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.DetailsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:src="@drawable/img_1"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/detail_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_18ssp"
+                    android:text="Food Name"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/_4sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#F0F0F0"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/decrement"
+                        android:layout_width="@dimen/_36sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:contentDescription="@string/todo"
+                        android:scaleType="centerCrop"
+                        android:layout_height="@dimen/_36sdp"
+                        android:src="@drawable/minus"/>
+
+
+                    <TextView
+                        android:id="@+id/counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_4sdp"/>
+
+                    <ImageView
+                        android:id="@+id/increment"
+                        android:layout_width="@dimen/_36sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/todo"
+                        android:layout_height="@dimen/_36sdp"
+                        android:src="@drawable/add"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/detail_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/food_des" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/your_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColorHint="#808080"
+                android:minHeight="48dp"
+                android:maxLength="30"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_6sdp" />
+
+            <EditText
+                android:id="@+id/userPhoneNumer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:hint="@string/phone_no"
+                android:maxLength="12"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColorHint="#808080"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_6sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:text="@string/dolar"/>
+
+                <TextView
+                    android:id="@+id/detailprice23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:text="@string/_5"/>
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit_order"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                app:cornerRadius="@dimen/_8sdp"
+                android:backgroundTint="@color/red"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_15ssp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

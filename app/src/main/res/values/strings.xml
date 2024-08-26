@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Food App</string>
+
+    <string name="food_des">Most famous chinese pizza is available with 20% discount.</string>
+    <string name="already_have_an_account"><u>Create new account</u></string>
+    <string name="already_acc"><u>Already have an account</u></string>
+    <string name="sign_up">Sign up</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_up_to_continue">Sign up to continue</string>
+    <string name="login">Login</string>
+    <string name="password2">Password</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="todo">TODO</string>
+    <string name="_1">1</string>
+    <string name="your_name">Your name</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="price">Price</string>
+    <string name="dolar">$</string>
+    <string name="_5">5</string>
+    <string name="submit_order">Submit Order</string>
+</resources>
