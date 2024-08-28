@@ -17,7 +17,4 @@ data class User(
     @ColumnInfo(name = "password")
     var password: String?,
 
-    @ColumnInfo(name = "isRegistered")
-    var isRegistered: Boolean = false
-
 )

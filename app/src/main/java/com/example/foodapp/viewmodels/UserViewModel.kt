@@ -24,21 +24,8 @@ class UserViewModel(application: Application):AndroidViewModel(application) {
         }
     }
 
-    fun deleteUser(user: User,onAccountDeleted:()->Unit) = viewModelScope.launch(Dispatchers.IO){
-        repository.delete(user)
-        withContext(Dispatchers.Main){
-            onAccountDeleted()
-        }
-    }
-
     fun getUser(id:Int):LiveData<User>{
         return repository.getUser(id)
-    }
-
-   suspend fun emailAlreadyExist(email: String):Long{
-        return withContext(Dispatchers.IO){
-            repository.emailAlreadyExist(email)
-        }
     }
 
 }

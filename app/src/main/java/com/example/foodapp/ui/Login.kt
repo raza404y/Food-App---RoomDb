@@ -2,6 +2,7 @@ package com.example.foodapp.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -43,8 +44,10 @@ class Login : AppCompatActivity() {
             signInUser()
         }
 
+        val sharedPreferences = getSharedPreferences("sh", MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("isLogged",false)
 
-        if (user?.isRegistered == true){
+        if (isLoggedIn){
             startActivity(Intent(this@Login,MainActivity::class.java))
             finish()
         }
@@ -69,6 +72,12 @@ class Login : AppCompatActivity() {
                 binding.passwordNumberET.error = "Password"
                 return
             } else if (email == user?.email && password == user?.password) {
+
+                val sharedPreferences = getSharedPreferences("sh", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putBoolean("isLogged",true)
+                editor.apply()
+
                 Toast.makeText(this@Login, "Login Successfully", Toast.LENGTH_SHORT).show()
                 startActivity((Intent(this@Login, MainActivity::class.java)))
                 finish()

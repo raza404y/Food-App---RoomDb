@@ -12,18 +12,11 @@ class UserRepository(private val userDao: UserDao) {
         userDao.insertUser(user)
     }
 
-    suspend fun delete(user: User){
-        userDao.deleteUser(user)
-    }
+
 
    fun getUser(id: Int):LiveData<User>{
        return userDao.getUser(id)
    }
 
-   suspend fun emailAlreadyExist(email: String):Long {
-      return withContext(Dispatchers.IO) {
-           userDao.emailAlreadyExist(email)
-       }
-   }
 
 }
